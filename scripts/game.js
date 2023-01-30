@@ -1,14 +1,8 @@
-/**
- * @jest-environment jsdom
- */
+let game = {
+    score: 0,
+    currentGame: [],
+    playerMoves: [],
+    choices: []
+};
 
-
-
-
-beforeAll(() => {
-    let fs = require("fs");
-    let fileContents = fs.readFileSync("index.html", "utf-8");
-    document.open();
-    document.write(fileContents);
-    document.close();
-});
+module.exports = {game};
